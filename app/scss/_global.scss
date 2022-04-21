@@ -1,0 +1,30 @@
+html,
+body{
+    height: 100%;
+}
+body {
+    font-size: 16px;
+    color: $default;
+    line-height: 26px;
+    color: $default;
+    @extend %muller-400;
+}
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+a{
+    color: $default;
+    line-height: 26px;
+    color: $default;
+    @extend %muller-400
+}
+.title{
+    text-align: left;
+    @extend %muller-400;
+    font-size: 48px;
+    line-height: 100%;
+    color: $default;
+    margin-bottom: 30px;
+}

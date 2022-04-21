@@ -1,0 +1,31 @@
+$default: #121723;
+$btn-color: #6D31EE;
+%muller-400{
+    font-family: 'Muller-Regular', sans-serif;
+    font-weight: 400;
+}
+%muller-500{
+    font-family: 'Muller-Medium', sans-serif;
+    font-weight: 500;
+}
+%muller-700{
+    font-family: 'Muller-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%btn{
+    @extend %muller-500;
+    border: 2px solid #121723;
+    box-sizing: border-box;
+    border-radius: 77px;
+    cursor: pointer;
+}
+
+%checkbox-hidden,
+%radio-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
