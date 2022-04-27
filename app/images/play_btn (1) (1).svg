@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42px" height="42px" viewBox="0 0 42 42" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(63.137255%,65.098039%,70.588235%);stroke-opacity:1;stroke-miterlimit:4;" d="M 44 24 C 44 35.044643 35.044643 44 24 44 C 12.955357 44 4 35.044643 4 24 C 4 12.955357 12.955357 4 24 4 C 35.044643 4 44 12.955357 44 24 Z M 44 24 " transform="matrix(0.875,0,0,0.875,0,0)"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(63.137255%,65.098039%,70.588235%);fill-opacity:1;" d="M 18.980469 27.820312 L 27.625 21.699219 C 28.125 21.351562 28.125 20.648438 27.625 20.300781 L 18.980469 14.179688 C 18.371094 13.742188 17.5 14.160156 17.5 14.878906 L 17.5 27.121094 C 17.5 27.839844 18.371094 28.257812 18.980469 27.820312 Z M 18.980469 27.820312 "/>
+</g>
+</svg>

@@ -5,6 +5,18 @@
 @import 'global';
 
 
+
+.mobile-header{
+    background-color: #f2f2f2;
+}
+.logo-mobile{
+    display: flex;
+    
+    padding: 23px 0;
+    width: 100%;
+
+    display: none;
+}
 .header{
     padding: 20px 0;
 
@@ -25,6 +37,7 @@
     &__bottom-links{
         display: flex;
         padding: 22px 0;
+      
 
     }
     &__bottom-link{
@@ -34,6 +47,9 @@
         color: $default;
         &:not(:last-child){
             margin-right: 52px;
+        }
+        &:hover{
+            color: #6D31EE;
         }
     }
     &__botom-live-box{
@@ -71,9 +87,34 @@
         color: #121723;
         padding-top: 5px;
     }
+    &__botom-live--mobile{
+        display: none;
+        & svg:hover{
+            path{
+                fill: $btn-color;
+            }
+        }
+
+    }
+    &__bottom-mobile{
+        display: flex;
+        justify-content: center;
+        color: $btn-color;
+        align-items: center;
+        border-top: 1px solid #E6E8EC;
+        border-bottom: 1px solid #E6E8EC;
+        padding: 15px 0;
+        svg{
+            transform: translateY(2px);
+            margin-right: 5px;
+        }
+        display: none;
+    }
 }
 .menu{
-    
+    &__btn{
+        display: none;
+    }
     &__list{
         display: flex;
         
@@ -96,10 +137,19 @@
         margin-right: 27px;
         transform: translateY(6px);
     }
-    &__link-entrance{
+    &__link-entrance,
+    &__link-entrance--mobile{
         display: inline-block;
         @extend %btn;
         padding: 10px 30.5px;
+        &:hover{
+            color: #fff;
+            background-color: $btn-color;
+            border-color: $btn-color;
+        }
+    }
+    &__link-entrance--mobile{
+        display: none;
     }
 }
 .hero{
@@ -141,7 +191,10 @@
         line-height: 20px;
         padding: 25px 54px;
         display: inline-block;
-
+        &:hover{
+            color: #fff;
+            background-color: $hover;
+        }
     }
 }
 .podcast{
@@ -168,7 +221,11 @@
         color: $btn-color;
         padding: 25px 54px;
         cursor: pointer;
-        
+        &:hover{
+            color: #fff;
+            background-color: $hover;
+            border-color: $hover;
+        }
     }    
 }
 .podcast-item{
@@ -199,6 +256,9 @@
     }
     &__link{
         padding: 20px 33px 14px 0;
+    }
+    &__link:hover{
+      
     }
     &__info-box{
         display: flex;
@@ -256,6 +316,7 @@
     padding: 94px 0;
     &__inner{
         display: flex;
+        justify-content: space-between;
         height: 550px;
     }
     &__choices{
@@ -264,6 +325,7 @@
         justify-content: space-between;
         max-width: 255px;
         width: 100%;
+        height: 550px;
         margin-right: 30px;
     }
     &__choices-autor{
@@ -271,6 +333,9 @@
         font-size: 16px;
         line-height: 16px;
         color: #a1a6b4;
+    }
+    &__choices-bottom--mobile{
+        display: none;
     }
     &__choices-img{
         margin-bottom: 24px;
@@ -289,7 +354,7 @@
         transform: translateY(3px);
     }
 
-    &__choices__text{
+    .broadcast__choices-text{
         @extend %muller-400;
         font-size: 16px;
         line-height: 150%;
@@ -403,7 +468,7 @@
             margin-right: 34px;
             &:hover{
                 path{
-                    fill: #AA9DFA
+                    fill: $hover;
                 }
             }
         }
@@ -428,8 +493,8 @@
         line-height: 16px;
         font-size: 16px;
         line-height: 16px;
-        color: #AA9DFA;
-        border: 2px solid #AA9DFA;
+        color: $hover;
+        border: 2px solid $hover;
         border-radius: 77px;
         padding: 12px 19.5px;
     }
@@ -455,13 +520,13 @@
             top: 20px;
         }
         &:hover{
-           border-color: #AA9DFA;
+           border-color: $hover;
             svg{
                 path{
-                    stroke: #AA9DFA;
+                    stroke: $hover;
                 }
                 circle{
-                    stroke: #AA9DFA;
+                    stroke: $hover;
                 }
             }
         }
@@ -488,9 +553,6 @@
         font-size: 16px;
         line-height: 16px;
         color: #fff;
-        &:hover{
-            color: #AA9DFA;
-        }
     }
 }
 .playlist{
@@ -543,13 +605,17 @@
         margin-top: 3;
         border-radius: 50%;
     }
-    &__info{
+    &__info,
+    &__info--mobile{
         border-top: 1px solid #A1A6B4;
         padding-top: 30px;
         @extend %muller-400;
         font-size: 16px;
         line-height: 22px;
         color: #A1A6B4;
+    }
+    &__info--mobile{
+        display: none;
     }
     &__copy{
         display: block;
@@ -565,6 +631,7 @@
         position: relative;
         height: 224px;
     }
+    
     &__item-info{
         display: inline-block;
         padding: 16px;
@@ -607,7 +674,24 @@
         right: 0;
     
     }
-
+ 
+    &__styles-link{
+        font-size: 16px;
+        line-height: 16px;
+        color: $btn-color;
+        border: 1px solid $btn-color;
+        border-radius: 77px;
+        margin-right: 20px;
+        padding: 9.5px 19.5px;
+        &:hover{
+            color: #fff;
+            background-color: $btn-color;
+        }
+    }
+    &__styles--mobile{
+        display: block;
+        display: none;
+    }
 }
 .market{
     background: #292E39;
@@ -645,7 +729,7 @@
             content: '';
             position: absolute;
             height: 11px;
-            width: 455px;
+            width: 100%;
             background-image: url(../images/wawe-border.svg);
             background-repeat: no-repeat;
             bottom: -20px;
@@ -688,10 +772,7 @@
 }
 .about{
     background: #121723;
-    padding: 94px;
-    &__inner{
-       
-    }
+    padding: 94px 0;
     &__top{
         display: flex;
 
@@ -725,6 +806,9 @@
             margin-right: 30px;
         }
     }
+    &__decor--mobile{
+        display: none;
+    }
     &__decor-spiral{
         margin-right: 30px;
         object-fit: contain;
@@ -740,7 +824,7 @@
     }
     &__team-item{
         img{
-            object-fit: cover;
+           
             margin-bottom: 20px;
         }
     }
@@ -864,7 +948,7 @@
             margin-right: 24px;
             &:hover{
                 path{
-                    fill: #AA9DFA
+                    fill: $hover;
                 }
             }
         }

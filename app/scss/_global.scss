@@ -18,7 +18,10 @@ a{
     color: $default;
     line-height: 26px;
     color: $default;
-    @extend %muller-400
+    @extend %muller-400;
+    &:hover{
+        color: $hover;
+    }
 }
 .title{
     text-align: left;
