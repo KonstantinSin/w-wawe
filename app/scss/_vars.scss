@@ -1,6 +1,7 @@
 $default: #121723;
 $btn-color: #6D31EE;
 $hover: #AA9DFA;
+$active: #4F28A5;
 %muller-400{
     font-family: 'Muller-Regular', sans-serif;
     font-weight: 400;
@@ -10,8 +11,8 @@ $hover: #AA9DFA;
     font-weight: 500;
 }
 %muller-700{
-    font-family: 'Muller-Regular', sans-serif;
-    font-weight: 400;
+    font-family: 'Muller-Bold', sans-serif;
+    font-weight: 700;
 }
 
 %btn{

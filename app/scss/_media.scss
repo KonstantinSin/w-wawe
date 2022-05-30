@@ -10,7 +10,6 @@
         .logo{
             display: none;
         }
-       
     }
     .header__botom-live{
         padding-left: 7px;
@@ -43,9 +42,6 @@
         &__items{
             grid-template-columns: repeat(2, 1fr);
         }
-        &__choices{
-            
-        }
     }
     .guest{
         &__bio{
@@ -53,14 +49,7 @@
         }
     }
     .guest-block{
-        &__authors-inner{
-            grid-template-columns: repeat(3, 1fr);
-        }
-        &__list{
-            &:last-child{
-                display: none;
-            }
-        }
+  
         &__link{
             font-size: 15px;
         }
@@ -90,9 +79,15 @@
         }
         &__item{
             display: flex;
-            height: 112px;
+            min-height: 112px;
+            max-height: 112px;
+            flex-direction: row;
             &::after{
                 left: 0;
+            }
+            img{
+                min-width: 112px;
+                height: 112px;
             }
         }
     }
@@ -103,6 +98,13 @@
             img{
                 object-fit: cover;
             }
+            &::before{
+                background-image: url('../images/new-tablet.svg');
+                width: 100px;
+                height: 100px;
+    
+                }
+            
         }
         &__content{
             max-width: 50%;
@@ -120,6 +122,9 @@
         }
         &__team-item{
             height: 337px;
+        }
+        &__form-input{
+            max-width: 397px;
         }
     }
 }
@@ -157,37 +162,10 @@
             padding: 12px 0;
             display: block;
         }
-        &__btn{
-            width: 24px;
-            height: 22px;
-            border: none;
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            padding: 0;
-            cursor: pointer;
-            span{
-            width: 100%;
-            height: 3px;
-            background-color: #6D31EE;   
-            }
-            &::after,
-            &::before{
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                background-color: #6D31EE
-            }
-            &::before{
-                top: 0;
-            }
-            &::after{
-                bottom: 0;
-            }
-        }
+    }
+    .menu-btn{
+        display: block;
+        transform: translateY(10px);
     }
     .header{
         &__botom-live-box{
@@ -240,7 +218,6 @@
             max-width: 100%;
         }
     }
-    
 }
 @media (max-width: 880px){
 
@@ -252,6 +229,11 @@
     .broadcast{
         &__items{
             grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .playlist{
+        &__itembox{
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     .about{
@@ -287,6 +269,9 @@
     .container{
         padding: 0 114px;
     }
+    .hero{
+        padding-top: 0;
+    }
     .broadcast{
         padding: 94px 0 30px 0;
         &__inner{
@@ -311,31 +296,39 @@
             padding-top: 30px;
         }
        &__choices-content{
+           display: flex;
+           flex-direction: column;
            max-width: 255px;
            width: 100%;
            margin-left: 20px;
        }
-    }
-    .playlist{
-        &__itembox{
-            grid-template-columns: repeat(2, 1fr);
-        }
+       &__choices-link{
+           max-width: 110px;
+           width: 100%;
+           padding: 5px 18px;
+       }
     }
     .about{
         &__form-inputbox{
             flex-direction: column;
-            input{
+            max-width: 100%;
+            label{
                 max-width: 100%;
-                &:not(:last-child){
-                    margin-bottom: 30px;
+                input{
+                    max-width: 100%;
                 }
-                
             }
+        }
+        &__form-label:not(:last-child){
+            margin-bottom: 30px;
         }
     }
 
 }
 @media (max-width: 750px){
+    .container{
+        padding: 0 32px;
+    }
     .logo-mobile{
         display: flex;
         justify-content: space-between;
@@ -345,6 +338,9 @@
         }
     }
     .user-nav{
+        &__link-search{
+            margin-right: 0;
+        }
         &__link-entrance{
             display: none;
         }
@@ -352,6 +348,7 @@
             display: inline-block;
         }
     }
+
     .header{
         &__bottom{
             display: none;
@@ -386,12 +383,7 @@
     }
 }
 @media (max-width: 600px){
-    .container{
-        padding: 0 32px;
-    }
-     .podcast-item{
-        
-     }
+
     .broadcast-item{
         &__title{
             font-size: 12px;
@@ -407,6 +399,25 @@
         }
     }
     .playlist{
+        &__item{
+            flex-direction: column;
+            width: 113px;
+            min-height: 160px;
+            max-height: 160px;
+            
+        }
+        &__item-info{
+            padding: 10px ;
+            height: inherit;
+        }
+        &__item-title{
+            font-size: 12px;
+            line-height: 12px;
+        }
+        &__item-descr{
+            font-size: 9px;
+            line-height: 9px;
+        }
         &__form{
             display: none;
         }
@@ -420,7 +431,6 @@
     .slick-track{
         padding: 15px 0;
     }
-    
 }
 @media (max-width: 470px){
     .title{
@@ -449,6 +459,7 @@
         }
     }
     .podcast{
+        padding: 54px 0;
         &__link{
             font-size: 16px;
             line-height: 16px;
@@ -457,6 +468,7 @@
     }
     .podcast-item{
         flex-direction: column;
+        width: 256px;
         &__title{
             font-size: 16px;
             line-height: 16px;
@@ -474,12 +486,28 @@
             height: 15px;
            
         }
+        &__descr{
+            padding: 16px 0 6px 30px;
+        }
+        &__link{
+            padding: 5px 33px 14px 0;
+        }
     }
-    .broadcast__choices-text{
-      
+    .broadcast{
+        padding: 54px 0;
+        &__choices-content{
+            flex-direction: column-reverse;
+     
+        }
+        &__choices-text{
             font-size: 14px;
             line-height: 150%;
-        
+            margin-bottom: 7px;
+        }
+       
+    }
+    .broadcast__choices-bottom--mobile{
+        padding-left: 32px;
     }
     .choices{
         &__inner{
@@ -487,35 +515,22 @@
         }
         
     }
+    .choices[data-type*=select-one]::after {
+        content: "";
+        right: 23.5px;
+    }
     .broadcast-item{
         &__content-box {
             padding: 10px 3px;
         }
     }
+    
+
     .playlist{
-        &__itembox{
-            grid-gap: auto;
-        }
-        &__item{
-            flex-direction: column;
-            min-height: 159px;
-            
-        }
-        &__item-info{
-            padding: 10px ;
-            height: inherit;
-        }
-        &__item-title{
-            font-size: 12px;
-            line-height: 12px;
-        }
-        &__item-descr{
-            font-size: 9px;
-            line-height: 9px;
-        }
+        padding: 54px 0;
     }
     .guest{
-        
+        padding: 54px 0;
         &__preview-subtitle{
             font-size: 14px;
             line-height: 150%;
@@ -524,19 +539,25 @@
             font-size: 14px;
             line-height: 160%;
         }
-        &__inner{
-         
-        }
     }
     .guest-block{
-        &__spoller:first-child{
-            display: none;
+        &__title{
+            font-size: 16px;
+            line-height: 16px;
         }
-    }
-    .guest-block__list:last-child {
-            display: none;
+        &__link{
+            font-size: 14px;
+            line-height: 110%;
+        }
+        &__authors{
+            max-width: 100px;
+        }
+
     }
     .market{
+        &__inner{
+            padding: 54px 0;
+        }
         &__title{
             font-size: 24px;
             line-height: 100%;
@@ -549,9 +570,27 @@
             font-size: 24px;
             line-height: 24px;
         }
-      
-    }
+        &__image{
+            &::before{
+                background-image: url('../images/new-mobile.svg');
+                width: 62px;
+                height: 62px;
+
+            }
+        }
+        &__link{
+        font-size: 16px;
+        line-height: 0;
+        padding: 12px 8px 19px 8px;
+        max-width: 256px;
+        width: 100%;
+        svg{
+            transform: translateY(3px);
+        }
+        }
+      }
     .about{
+        padding: 54px 0;
         &__subtitle{
             font-size: 14px;
             line-height: 150%;
@@ -574,6 +613,7 @@
         &__decor--mobile{
             display: none;
         }
+
     }
     .footer{
         &__link{
