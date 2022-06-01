@@ -22,7 +22,7 @@ $('.podcast__link').on('click', function(){
   });
 
 
-  $(document).ready(function() {
+$(document).ready(function() {
     var windowWidth = $(window).width();
     if (windowWidth < 470) $(".podcast-mobile").addClass("podcast-more");
     else $(".podcast-mobile").removeClass("podcast-more");

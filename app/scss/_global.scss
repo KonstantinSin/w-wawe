@@ -28,6 +28,9 @@ a{
     &:active{
         color: $active;
     }
+    &:focus-visible{
+        @extend %focus;
+    }
 }
 .title{
     text-align: left;

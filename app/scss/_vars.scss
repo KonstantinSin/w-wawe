@@ -2,6 +2,7 @@ $default: #121723;
 $btn-color: #6D31EE;
 $hover: #AA9DFA;
 $active: #4F28A5;
+
 %muller-400{
     font-family: 'Muller-Regular', sans-serif;
     font-weight: 400;
@@ -30,4 +31,9 @@ $active: #4F28A5;
     overflow: hidden;
     clip: rect(0 0 0 0);
     position: absolute;
+}
+%focus{
+    background-color: $hover;
+    color: #fff;
+    outline: none;
 }
