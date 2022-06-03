@@ -1,5 +1,8 @@
 $default: #121723;
 $btn-color: #6D31EE;
+$hover: #AA9DFA;
+$active: #4F28A5;
+
 %muller-400{
     font-family: 'Muller-Regular', sans-serif;
     font-weight: 400;
@@ -9,8 +12,8 @@ $btn-color: #6D31EE;
     font-weight: 500;
 }
 %muller-700{
-    font-family: 'Muller-Regular', sans-serif;
-    font-weight: 400;
+    font-family: 'Muller-Bold', sans-serif;
+    font-weight: 700;
 }
 
 %btn{
@@ -28,4 +31,9 @@ $btn-color: #6D31EE;
     overflow: hidden;
     clip: rect(0 0 0 0);
     position: absolute;
+}
+%focus{
+    background-color: $hover;
+    color: #fff;
+    outline: none;
 }

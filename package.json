@@ -20,6 +20,8 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
     "jquery-form-styler": "^2.0.2",
-    "sass": "^1.49.0"
+    "just-validate": "^3.7.0",
+    "sass": "^1.49.0",
+    "slick-slider": "^1.8.2"
   }
 }
